@@ -1,0 +1,172 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App-header {
+  background-color: white;
+}
+
+.calculator-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.calculator {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.display {
+  background: #333;
+  color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  text-align: right;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.query {
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+.result {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.keys,
+.memory-keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.keys button,
+.memory-keys button {
+  padding: 15px;
+  font-size: 1rem;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+}
+
+.keys button:hover,
+.memory-keys button:hover {
+  background: #ddd;
+}
+
+.keys button:active,
+.memory-keys button:active {
+  background: #bbb;
+}
+
+.sidebar {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.toggle-button {
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.toggle-button:hover {
+  background: #0056b3;
+}
+
+.panel {
+  background: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 10px;
+  color: #000;
+}
+
+.panel h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+}
+
+.panel ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.panel li {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.panel button {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.panel button:hover {
+  background: #cc0000;
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+  .panel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-height: 300px;
+    z-index: 1000;
+  }
+
+  .panel ul {
+    max-height: 200px;
+  }
+
+  .calculator-container {
+    width: 100%;
+    max-width: none;
+    padding: 10px;
+  }
+}
